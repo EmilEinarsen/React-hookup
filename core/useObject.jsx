@@ -24,7 +24,7 @@ const useArray = initial => {
 		setObject,
 		{
 			add: val => setObject( obj => ({ ...obj, val }) ),
-			clear:  setObject([]),
+			clear:  setObject({}),
 			removeByKey: index => setObject( () => filterBy(object, ACTIONS.KEY, index)),
 			removeByValue: value => setObject( () => filterBy(object, ACTIONS.VALUE, value)),
 		}
