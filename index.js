@@ -5,6 +5,7 @@ import useDebounce from './core/useDebounce'
 import useThrottle from './core/useThrottle'
 import useArray from './core/useArray'
 import useObject from './core/useObject'
+import useOnClickOutside from './core/useOnClickOutside'
 
 
 export {
@@ -15,4 +16,5 @@ export {
 	useThrottle,
 	useArray,
 	useObject,
+	useOnClickOutside,
 }
