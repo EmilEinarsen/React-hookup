@@ -1,14 +1,14 @@
 import { useState } from 'react'
 
 const useFocus = () => {
-	const [isFocus, setFocus] = useState(false)
-	return {
+	const [isFocus, setIsFocus] = useState(false)
+	return [
 		isFocus,
-		props: {
-			onFocus: () => setFocus(true),
-			onBlur: () => setFocus(false),
+		{
+			onFocus: () => setIsFocus(true),
+			onBlur: () => setIsFocus(false),
 		},
-	}
+	]
 }
 
 export default useFocus

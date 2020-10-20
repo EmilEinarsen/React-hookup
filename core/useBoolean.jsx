@@ -9,7 +9,7 @@ const useBoolean = initial => {
 	const [value, setValue] = useState(initial)
 
 	const methods = {
-		toggle: value => setValue(!value),
+		toggle: () => setValue(!value),
 		setTrue: () => setValue(true),
 		setFalse: () => setValue(false),
 	}
