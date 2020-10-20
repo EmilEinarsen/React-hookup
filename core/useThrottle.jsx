@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
-const useThrottle = () => {
+const useThrottle = (initialValue) => {
 	
 	const [ state, setState ] = useState(initialValue)
 	let timeout = undefined
