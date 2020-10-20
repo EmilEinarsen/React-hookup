@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState } from 'react'
 
 const useArray = initial => {
 	const [ array, setArray ] = useState(initial)
@@ -8,8 +8,9 @@ const useArray = initial => {
 		setArray,
 		{
 			add: val => setArray( arr => [ ...arr, val ]),
-			clear:  setArray([]),
+			clear:  () => setArray([]),
 			removeByIndex: index => setArray( arr => arr.filter((v, i) => i !== index )),
+			removeByValue: value => setArray( arr => arr.filter((v, i) => v !== value )),
 			removeById: id => setArray( arr => arr.filter(v => v && v.id !== id )),
 		}
 	]

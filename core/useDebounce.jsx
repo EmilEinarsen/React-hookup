@@ -1,13 +1,14 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 
 const useDebounce = (initialValue) => {
+	const timeout = useRef(null)
 	const [ state, setState ] = useState(initialValue)
-	let timeout
 
 	return [
 		state,
 		(value, delay) => {
-			timeout = setTimeout(() => setState(value), delay)
+			clearTimeout(timeout.current)
+			timeout.current = setTimeout(() => setState(value), delay)
 		}
 	]
 	

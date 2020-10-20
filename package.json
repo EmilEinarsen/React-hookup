@@ -1,6 +1,6 @@
 {
   "name": "bjork_react-hookup",
-  "version": "1.3.7",
+  "version": "1.3.8",
   "description": "A collection of custom react hooks",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/EmilEinarsen/bjork_react-hookup#readme",
   "dependencies": {
-    "bjork_usestorage": "^1.2.0"
+    "bjork_usestorage": "^1.2.2"
   }
 }
