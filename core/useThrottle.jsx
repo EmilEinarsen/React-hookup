@@ -2,23 +2,18 @@ import { useState, useEffect } from 'react'
 
 const useThrottle = () => {
 	
-	const [ state, setState ] = useState()
-	let timeout
+	const [ state, setState ] = useState(initialValue)
+	let timeout = undefined
 
-	useEffect(() => {
-
-		timeeout = setTimeout(() => {
-
-			setState(value)
-			
-			clearTimeout(timeeout)
-			
-		}, delay)
-		
-
-	}, [ value, delay, timeeout ])
-
-	return state
+	return [
+		state,
+		(value, delay) => {
+			if(!timeout) setTimeout(() => {
+				setState(value)
+				timeout = undefined
+			}, delay)
+		}
+	]
 
 }
 
