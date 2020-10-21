@@ -42,7 +42,10 @@ const useAsync = (asyncFunction, immediate = true) => {
 		if (immediate) execute()
 	}, [execute, immediate])
 
-	return state
+	return [
+		state,
+		execute,
+	]
 }
 
 export default useAsync

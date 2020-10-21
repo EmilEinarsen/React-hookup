@@ -6,6 +6,7 @@ import useThrottle from './core/useThrottle'
 import useArray from './core/useArray'
 import useObject from './core/useObject'
 import useOnClickOutside from './core/useOnClickOutside'
+import useHover from './core/useHover'
 import useWindowScroll from './core/useWindowScroll'
 import useField from './core/useField'
 import useAsync from './core/useAsync'
@@ -24,6 +25,6 @@ export {
 	useHover,
 	useWindowScroll,
 	useField,
-	useAsync,
 	useInView,
+	useAsync,
 }
