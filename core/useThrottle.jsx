@@ -1,17 +1,18 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 
 const useThrottle = (initialValue) => {
-	
+	const timeout = useRef(null)
 	const [ state, setState ] = useState(initialValue)
-	let timeout = undefined
 
 	return [
 		state,
 		(value, delay) => {
-			if(!timeout) setTimeout(() => {
-				setState(value)
-				timeout = undefined
-			}, delay)
+			if(!timeout.current) {
+				timeout.current = setTimeout(() => {
+					setState(value)
+					timeout.current = null
+				}, delay)
+			}
 		}
 	]
 
