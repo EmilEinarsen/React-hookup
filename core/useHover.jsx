@@ -5,8 +5,8 @@ const useHover = () => {
 	return [
 		isHover,
 		{
-			onMouseenter: () => setIsHover(true),
-			onMouseleave: () => setIsHover(false),
+			onMouseEnter: () => setIsHover(true),
+			onMouseLeave: () => setIsHover(false),
 		},
 	]
 }
