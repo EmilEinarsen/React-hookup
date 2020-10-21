@@ -7,8 +7,14 @@ function useOnClickOutside(ref, callback) {
 			callback(e)
 		}
 
-		document.addEventListener('mousedown', listener)
-		document.addEventListener('touchstart', listener)
+		document.addEventListener('mousedown', listener, {
+			capture: false,
+			passive: true,
+		})
+		document.addEventListener('touchstart', listener, {
+			capture: false,
+			passive: true,
+		})
 
 		return () => {
 			document.removeEventListener('mousedown', listener)
