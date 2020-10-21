@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState } from 'react'
 
 export const ACTIONS = {
 	KEY: 'key',
@@ -16,19 +16,21 @@ const filterBy = (object, action, value) => (
 		), {})
 )
 
-const useArray = initial => {
+const useObject = initial => {
 	const [ object, setObject ] = useState(initial)
+
+	console.log(object)
 
 	return [
 		object,
 		setObject,
 		{
-			add: val => setObject( obj => ({ ...obj, val }) ),
-			clear:  setObject({}),
-			removeByKey: index => setObject( () => filterBy(object, ACTIONS.KEY, index)),
-			removeByValue: value => setObject( () => filterBy(object, ACTIONS.VALUE, value)),
+			add: val => setObject( obj => ({ ...obj, ...val }) ),
+			clear: () => setObject({}),
+			removeByKey: index => setObject( obj => filterBy(obj, ACTIONS.KEY, index) ),
+			removeByValue: value => setObject( obj => filterBy(obj, ACTIONS.VALUE, value) ),
 		}
 	]
 }
 
-export default useArray
+export default useObject

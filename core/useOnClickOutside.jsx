@@ -1,9 +1,8 @@
-import { useEffect } from 'react'
+import { useLayoutEffect } from 'react'
 
 function useOnClickOutside(ref, callback) {
-  	useEffect(() => {
+	useLayoutEffect(() => {
 		const listener = (e) => {
-
 			if (!ref.current || ref.current.contains(e.target)) return
 			callback(e)
 		}
