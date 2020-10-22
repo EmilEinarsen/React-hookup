@@ -1,5 +1,12 @@
 import { useLayoutEffect } from 'react'
 
+
+/**
+ * useOnClickOutside hook - Adds Eventlisners to the element _ref_ and executes _func_ on click outside.
+ * 
+ * @param {element} ref - Ref to the DOMelement
+ * @param {element} offset - Offsets where the element is considerd "in view" by the Y-axis
+ */
 function useOnClickOutside(ref, func) {
 	useLayoutEffect(() => {
 		const listener = (e) => {

@@ -7,12 +7,19 @@ const getCoordinates = () => ({
 	x: window.pageXOffset,
 	y: window.pageYOffset,
 })
-	
+
+
+/**
+ * useWindowScroll hook - Adds Eventlisners to the window and returns and an array of two elemnts: state and setCoordinatesAndScrollTo
+ * _coordinates_ {object}: Contains two propertys x {number} and y {number}. Each contains the scroll "position" by x, respectivly y.
+ * 
+ * @return {array} [ coordinates, setCoordinatesAndScrollTo ]
+ */
 const useWindowScroll = () => {
-	const [state, setState] = useState( getCoordinates() )
+	const [coordinates, setCoordinates] = useState( getCoordinates() )
 
 	useEffect(() => {
-		const handler = () => throttle( () => setState( getCoordinates() ), 50)
+		const handler = () => throttle( () => setCoordinates( getCoordinates() ), 50)
 
 		window.addEventListener('scroll', handler, {
 			capture: false,
@@ -24,14 +31,14 @@ const useWindowScroll = () => {
 		}
 	}, [])
 
-	const setStateAndScrollTo = ({x,y}) => {
+	const setCoordinatesAndScrollTo = ({x,y}) => {
 		window.scrollTo(x, y)
-		setState({x, y})
+		setCoordinates({x, y})
 	}
 
 	return [
-		state,
-		setStateAndScrollTo,
+		coordinates,
+		setCoordinatesAndScrollTo,
 	]
 }
 

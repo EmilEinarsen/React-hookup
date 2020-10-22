@@ -14,17 +14,19 @@ import useInView from './core/useInView'
 
 
 export {
-	useStorage,
-	useBoolean,
-	useFocus,
-	useDebounce,
-	useThrottle,
+	
+	useAsync,
 	useArray,
+	useBoolean,
+	useDebounce,
+	useField,
+	useFocus,
+	useHover,
+	useInView,
 	useObject,
 	useOnClickOutside,
-	useHover,
+	useStorage,
+	useThrottle,
 	useWindowScroll,
-	useField,
-	useInView,
-	useAsync,
+	
 }

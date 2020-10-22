@@ -1,6 +1,6 @@
 {
   "name": "bjork_react-hookup",
-  "version": "1.5.1",
+  "version": "1.5.5",
   "description": "A collection of custom react hooks",
   "main": "index.js",
   "scripts": {

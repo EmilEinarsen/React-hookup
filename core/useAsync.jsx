@@ -25,6 +25,18 @@ const initalState = {
 	error: null,
 }
 
+/**
+ * useAsync hook - Returns an array of two elements: state and execute. 
+ * * _state_ {object}: contains three propertys: pending, value and error. 
+ * 	* _pending_ {boolean}: Indicates whether or not a _value_ is pending, default false
+ * 	* _value_ {*}: Contains the resolved value from _asyncFunction_, default null
+ * 	* _error_ {*}: Contains the rejected value from _asyncFunction_, default null
+ * * _execute_ {function}: that executes the provided function _asyncFunction_ and updates the state, depending on resolve or reject
+ * 
+ * @param {array} asyncFunction - Function to be executed on dispatch
+ * @param {array} immediate - Determens whether or not _asyncFunction_ should be executed immediatly, defualt true
+ * @return {array} [ {object} state, {function} execute ]
+ */
 const useAsync = (asyncFunction, immediate = true) => {
 	const [ state, dispatch ] = useReducer(fetchRefucer, initalState)
 	
