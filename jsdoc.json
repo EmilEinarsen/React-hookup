@@ -1,0 +1,18 @@
+{
+	"source": {
+	  "include": [
+		  "index.js",
+		  "core/"
+		]
+	},
+	"plugins": ["plugins/markdown"],
+	"templates": {
+	  "cleverLinks": true,
+	  "monospaceLinks": true
+	},
+	"opts": {
+	  "recurse": true,
+	  "destination": "./docs/",
+	  "readme": "./readme.md"
+	}
+  }
