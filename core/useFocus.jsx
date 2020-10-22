@@ -1,13 +1,16 @@
-import { useState } from 'react'
+import useBoolean from './useBoolean'
 
 const useFocus = () => {
-	const [isFocus, setIsFocus] = useState(false)
+	const [isFocus, setIsFocus, { setTrue, setFalse }] = useBoolean()
+
+	const bind = {
+		onFocus: setTrue,
+		onBlur: setFalse,
+	}
+
 	return [
 		isFocus,
-		{
-			onFocus: () => setIsFocus(true),
-			onBlur: () => setIsFocus(false),
-		},
+		bind,
 	]
 }
 

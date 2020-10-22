@@ -1,10 +1,10 @@
 import { useLayoutEffect } from 'react'
 
-function useOnClickOutside(ref, callback) {
+function useOnClickOutside(ref, func) {
 	useLayoutEffect(() => {
 		const listener = (e) => {
 			if (!ref.current || ref.current.contains(e.target)) return
-			callback(e)
+			func(e)
 		}
 
 		document.addEventListener('mousedown', listener, {

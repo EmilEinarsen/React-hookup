@@ -8,15 +8,15 @@ const useInView = (ref, offset = 0) => {
 	if (!ref) return
 
 	const throttle = (new Throttle()).process
-	const [ isInView, setIsInView ] = useBoolean()
+	const [ isInView, setIsInView { setTrue }] = useBoolean()
 	const { y } = useWindowScroll()[0]
 
 	useEffect(() => {
-		throttle(() => y >= elementYPos() ? setIsInView(true) : '', 200)
+		throttle(() => y >= elementYPos() ? setTrue() : '', 200)
 	}, [ref, offset, y])
 
 	return [
-		inView
+		isInView,
 	]
 }
 

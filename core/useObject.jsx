@@ -19,17 +19,17 @@ const filterBy = (object, action, value) => (
 const useObject = initial => {
 	const [ object, setObject ] = useState(initial)
 
-	console.log(object)
+	const methods = {
+		add: val => setObject( obj => ({ ...obj, ...val }) ),
+		clear: () => setObject({}),
+		removeByKey: index => setObject( obj => filterBy(obj, ACTIONS.KEY, index) ),
+		removeByValue: value => setObject( obj => filterBy(obj, ACTIONS.VALUE, value) ),
+	}
 
 	return [
 		object,
 		setObject,
-		{
-			add: val => setObject( obj => ({ ...obj, ...val }) ),
-			clear: () => setObject({}),
-			removeByKey: index => setObject( obj => filterBy(obj, ACTIONS.KEY, index) ),
-			removeByValue: value => setObject( obj => filterBy(obj, ACTIONS.VALUE, value) ),
-		}
+		methods,
 	]
 }
 

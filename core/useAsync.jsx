@@ -1,12 +1,17 @@
 import { useEffect, useReducer } from 'react'
 
+const ACTION = {
+	FETCH: 'fetch',
+	RESPONSE: 'response'
+}
+
 const fetchRefucer = (state, action) => {
 	switch (action.type) {
-		case 'fetch': return {
+		case ACTION.FETCH: return {
 			...initalState,
 			pending: true
 		}
-		case 'response': return {
+		case ACTION.RESPONSE: return {
 			...state,
 			...action.payload,
 			pending: false,
@@ -24,16 +29,16 @@ const useAsync = (asyncFunction, immediate = true) => {
 	const [ state, dispatch ] = useReducer(fetchRefucer, initalState)
 	
 	const execute = async () => {
-		dispatch({type: 'fetch'})
+		dispatch({type: ACTION.FETCH})
 
 		try {
 
 			let response = await asyncFunction()
-			dispatch({type: 'response', payload: {value: response}})
+			dispatch({type: ACTION.RESPONSE, payload: {value: response}})
 
 		} catch (error) {
 
-			dispatch({type: 'response', payload: {error}})
+			dispatch({type: ACTION.RESPONSE, payload: {error}})
 
 		}
 	}

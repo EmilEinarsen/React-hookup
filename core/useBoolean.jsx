@@ -1,10 +1,5 @@
 import { useState } from 'react'
 
-/**
- * @function useBoolean - hook
- * @param {mixed} initial
- * @return {Object}
- */
 const useBoolean = initial => {
 	const [value, setValue] = useState(initial)
 

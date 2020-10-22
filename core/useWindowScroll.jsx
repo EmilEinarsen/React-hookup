@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import Throttle from 'bjork_restrain/modules/Throttle'
 
 const throttle = (new Throttle()).process
+
 const getCoordinates = () => ({
 	x: window.pageXOffset,
 	y: window.pageYOffset,
@@ -23,12 +24,14 @@ const useWindowScroll = () => {
 		}
 	}, [])
 
+	const setStateAndScrollTo = ({x,y}) => {
+		window.scrollTo(x, y)
+		setState({x, y})
+	}
+
 	return [
 		state,
-		({x,y}) => {
-			window.scrollTo(x, y)
-			setState({x, y})
-		},
+		setStateAndScrollTo,
 	]
 }
 

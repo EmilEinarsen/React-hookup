@@ -1,13 +1,16 @@
-import { useState } from 'react'
+import useBoolean from './useBoolean'
 
 const useHover = () => {
-	const [isHover, setIsHover] = useState(false)
+	const [isHover, setIsHover, { setTrue, setFalse }] = useBoolean()
+
+	const bind = {
+		onMouseEnter: setTrue,
+		onMouseLeave: setFalse,
+	}
+
 	return [
 		isHover,
-		{
-			onMouseEnter: () => setIsHover(true),
-			onMouseLeave: () => setIsHover(false),
-		},
+		bind,
 	]
 }
 
