@@ -36,9 +36,9 @@ const useArray = initial => {
 	const methods = {
 		add: val => setArray( arr => [ ...arr, val ]),
 		clear:  () => setArray([]),
-		removeByIndex: index => setArray( arr => filter({action: ACTIONS.INDEX, payload: {arr, index}}) ),
-		removeByValue: value => setArray( arr => filter({action: ACTIONS.VALUE, payload: {arr, value}})),
-		removeById: id => setArray( arr => filter({action: ACTIONS.INDEX, payload: {arr, id}})),
+		removeByIndex: index => setArray( arr => filter({type: ACTIONS.INDEX, payload: {arr, index}}) ),
+		removeByValue: value => setArray( arr => filter({type: ACTIONS.VALUE, payload: {arr, value}})),
+		removeById: id => setArray( arr => filter({type: ACTIONS.INDEX, payload: {arr, id}})),
 	}
 
 	return [
