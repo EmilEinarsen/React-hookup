@@ -27,7 +27,7 @@ const useWindowScroll = () => {
 		})
 	
 		return () => {
-			window.removeEventListener('scroll', handler);
+			window.removeEventListener('scroll', handler)
 		}
 	}, [])
 
@@ -42,4 +42,4 @@ const useWindowScroll = () => {
 	]
 }
 
-  export default useWindowScroll;
+export default useWindowScroll

@@ -10,10 +10,8 @@ const filter = ({type, payload: { obj: providedObj, key: providedKey, value }}) 
 		.filter(key => (
 
 			type === ACTIONS.KEY ? key !== providedKey
-
-			: type === ACTIONS.VALUE ? providedObj[key] !== value
-
-			: true
+				: type === ACTIONS.VALUE ? providedObj[key] !== value
+					: true
 			
 		)).reduce((obj, key) => (
 			{ ...obj, [key]: providedObj[key] }

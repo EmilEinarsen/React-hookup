@@ -9,14 +9,12 @@ const ACTIONS = {
 const filter = ({type, payload: { arr, index, value, id }}) => (
 
 	type === ACTIONS.INDEX ? arr.filter((v, i) => i !== index )
-
-	: type === ACTIONS.VALUE ? arr.filter((v, i) => v !== value)
-
-	: type === ACTIONS.ID ? arr.filter(v => v && v.id !== id )
-
-	: arr
+		: type === ACTIONS.VALUE ? arr.filter(v => v !== value)
+			: type === ACTIONS.ID ? arr.filter(v => v && v.id !== id )
+				: arr
 
 )
+
 
 /**
  * useArray hook - Returns an array of three elements: array, setArray, methods.

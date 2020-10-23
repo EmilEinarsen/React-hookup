@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 import { useBoolean, useWindowScroll } from '..'
-import Throttle from 'bjork_restrain/modules/Throttle';
+import Throttle from 'bjork_restrain/modules/Throttle'
 
-const elementYPos = () => ref.getBoundingClientRect().top + window.pageYOffset - window.innerHeight + offset
+const elementYPos = (ref, offset) => ref.getBoundingClientRect().top + window.pageYOffset - window.innerHeight + offset
 
 
 /**
@@ -21,11 +21,11 @@ const useInView = (ref, offset = 0) => {
 	const throttle = (new Throttle()).process
 
 	useEffect(() => {
-		throttle(() => y >= elementYPos() ? setTrue() : '', 200)
+		throttle(() => y >= elementYPos(ref, offset) ? setTrue() : '', 200)
 	}, [ref, offset, y])
 
 	const setInViewByScrollTo = () => {
-		const { top: y } =  ref.getBoundingClientRect()
+		const { top: y } = ref.getBoundingClientRect()
 		const x = 0
 		window.scrollTo(x, y)
 	}

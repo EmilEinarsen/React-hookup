@@ -16,7 +16,7 @@ const useBoolean = initial => {
 	const [is, setIs] = useState(Boolean(initial))
 
 	const methods = {
-		toggle: () => setIs(!value),
+		toggle: () => setIs(!is),
 		setTrue: () => setIs(true),
 		setFalse: () => setIs(false),
 	}

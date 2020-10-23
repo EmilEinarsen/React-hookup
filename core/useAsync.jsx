@@ -7,15 +7,15 @@ const ACTION = {
 
 const fetchRefucer = (state, action) => {
 	switch (action.type) {
-		case ACTION.FETCH: return {
-			...initalState,
-			pending: true
-		}
-		case ACTION.RESPONSE: return {
-			...state,
-			...action.payload,
-			pending: false,
-		}
+	case ACTION.FETCH: return {
+		...initalState,
+		pending: true
+	}
+	case ACTION.RESPONSE: return {
+		...state,
+		...action.payload,
+		pending: false,
+	}
 	}
 }
 
