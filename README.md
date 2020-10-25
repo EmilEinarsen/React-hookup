@@ -42,9 +42,10 @@ const [ is, setIs, { toggle } ] = useBoolean(true)
 | 🤏[`useScreenType`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useScreenType.md)         | [ type ]                                   |                                         |
 | 💾[`useStorage`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useStorage.md)               | [ item, setItem ]                                                    | ( type, key, initialValue )             |
 | 🥁[`useThrottle`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useThrottle.md)             | [ state, setStateByThrottle ]                                        | ( initial )                             |
-| 🧭[`useWindowScroll`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useWindowScroll.md)     | [ coordiantes, setCoordinatesAndScrollTo ] 
-|                                         |
 | ↕[`useWindowSize`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useWindowSize.md)         | [ size ]                                                              |                                         |
+|🧭[`useWindowScroll`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useWindowScroll.md)|[ coordiantes, setCoordinatesAndScrollTo ] 
+|                                         |
+
 
 
 ## 👨‍💻`Contribution`
