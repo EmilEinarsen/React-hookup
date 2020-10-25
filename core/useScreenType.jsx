@@ -19,6 +19,12 @@ const getSreenType = ({ XS, SM, MD, LG, XL } = SIZE) => ({
 	[XL[0]]: matchMedia(XL[1]),
 })
 
+/**
+ * useWindowScroll hook - Returns and an array with an element, type
+ * _types_ {object}: contains 5 propertys, xs - xl. Each property can either be true or false, to represent a breakpoint
+ * 
+ * @return {array} [ type ]
+ */
 const useScreenType = () => {
 	const [ type, setType ] = useState(getSreenType())
 	const { width } = useWindowSize()[0]
