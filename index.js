@@ -11,6 +11,8 @@ import useWindowScroll from './core/useWindowScroll'
 import useField from './core/useField'
 import useAsync from './core/useAsync'
 import useInView from './core/useInView'
+import useWindowSize from './core/useWindowSize'
+import useScreenType from './core/useScreenType'
 
 
 export {
@@ -28,5 +30,7 @@ export {
 	useStorage,
 	useThrottle,
 	useWindowScroll,
+	useWindowSize,
+	useScreenType,
 	
 }

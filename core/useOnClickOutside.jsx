@@ -1,5 +1,9 @@
 import { useLayoutEffect } from 'react'
 
+const EventlisnerOptions = {
+	capture: false,
+	passive: true,
+}
 
 /**
  * useOnClickOutside hook - Adds Eventlisners to the element _ref_ and executes _func_ on click outside.
@@ -14,18 +18,12 @@ function useOnClickOutside(ref, func) {
 			func(e)
 		}
 
-		document.addEventListener('mousedown', listener, {
-			capture: false,
-			passive: true,
-		})
-		document.addEventListener('touchstart', listener, {
-			capture: false,
-			passive: true,
-		})
+		document.addEventListener('mousedown', listener, EventlisnerOptions)
+		document.addEventListener('touchstart', listener, EventlisnerOptions)
 
 		return () => {
-			document.removeEventListener('mousedown', listener)
-			document.removeEventListener('touchstart', listener)
+			document.removeEventListener('mousedown', listener, EventlisnerOptions)
+			document.removeEventListener('touchstart', listener, EventlisnerOptions)
 		}
 	}, [])
 }

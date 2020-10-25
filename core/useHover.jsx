@@ -9,7 +9,7 @@ import useBoolean from './useBoolean'
  * @return {array} [ isHover, {object} bind ]
  */
 const useHover = () => {
-	const [isHover, setIsHover, { setTrue, setFalse }] = useBoolean()
+	const [isHover, , { setTrue, setFalse }] = useBoolean()
 
 	const bind = {
 		onMouseEnter: setTrue,

@@ -9,7 +9,7 @@ import useBoolean from './useBoolean'
  * @return {array} [ isFocus, {object} bind ]
  */
 const useFocus = () => {
-	const [ isFocus, setIsFocus, { setTrue, setFalse } ] = useBoolean()
+	const [ isFocus, , { setTrue, setFalse } ] = useBoolean()
 
 	const bind = {
 		onFocus: setTrue,

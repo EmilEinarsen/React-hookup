@@ -3,6 +3,11 @@ import Throttle from 'bjork_restrain/modules/Throttle'
 
 const throttle = (new Throttle()).process
 
+const EventlisnerOptions = {
+	capture: false,
+	passive: true,
+}
+
 const getCoordinates = () => ({
 	x: window.pageXOffset,
 	y: window.pageYOffset,
@@ -21,13 +26,10 @@ const useWindowScroll = () => {
 	useEffect(() => {
 		const handler = () => throttle( () => setCoordinates( getCoordinates() ), 50)
 
-		window.addEventListener('scroll', handler, {
-			capture: false,
-			passive: true,
-		})
+		window.addEventListener('scroll', handler, EventlisnerOptions)
 	
 		return () => {
-			window.removeEventListener('scroll', handler)
+			window.removeEventListener('scroll', handler, EventlisnerOptions)
 		}
 	}, [])
 

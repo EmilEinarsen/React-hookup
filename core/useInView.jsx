@@ -16,7 +16,7 @@ const elementYPos = (ref, offset) => ref.getBoundingClientRect().top + window.pa
  */
 const useInView = (ref, offset = 0) => {
 	if (!ref) return
-	const [ isInView, setIsInView, { setTrue }] = useBoolean()
+	const [ isInView, , { setTrue }] = useBoolean()
 	const { y } = useWindowScroll()[0]
 	const throttle = (new Throttle()).process
 
