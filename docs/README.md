@@ -1,6 +1,3 @@
-
-------------------------------------------------------------------------------------------------------------------------
-
 ## [useArray](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useArray.md)
 Manipulate and read an array
 
@@ -52,7 +49,7 @@ Listens for clicks outside of element. Requires ref to function.
 ------------------------------------------------------------------------------------------------------------------------
 
 ## [useScreenType](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useScreenType.md)
-Utilizes [useWindowSize](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useWindowSize.md) and matchMedia to return and object containing 5 propertys xs-xl, each can either be true or false. Each of the propertys breakpoints are based of [Material UI](https://material-ui.com/customization/breakpoints/)
+Utilizes [useWindowSize](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useWindowSize.md) and [matchMedia](https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia) to return and object containing 5 propertys xs-xl, each can either be true or false. Each of the propertys breakpoints are based of [Material UI](https://material-ui.com/customization/breakpoints/)
 
 ------------------------------------------------------------------------------------------------------------------------
 
