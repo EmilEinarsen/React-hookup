@@ -27,10 +27,10 @@ export {
 	useInView,
 	useObject,
 	useOnClickOutside,
+	useScreenType,
 	useStorage,
 	useThrottle,
 	useWindowScroll,
 	useWindowSize,
-	useScreenType,
 	
 }

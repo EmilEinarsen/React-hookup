@@ -38,8 +38,8 @@ const useObject = initial => {
 	const methods = {
 		add: val => setObject( obj => ({ ...obj, ...val }) ),
 		clear: () => setObject({}),
-		removeByKey: key => setObject( obj => filter({action: ACTIONS.KEY, payload: {obj, key}}) ),
-		removeByValue: value => setObject( obj => filter({action: ACTIONS.VALUE, payload: {obj, value}}) ),
+		removeByKey: key => setObject( obj => filter({type: ACTIONS.KEY, payload: {obj, key}}) ),
+		removeByValue: value => setObject( obj => filter({type: ACTIONS.VALUE, payload: {obj, value}}) ),
 	}
 
 	return [
