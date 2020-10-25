@@ -10,13 +10,13 @@ Use npm to install react-hookup.
 ## Usage
 
 ```js
------------- // for example \\\\ ------------
+------------ // for example \\ ------------
 
 import { useBoolean } from 'bjork_react-hookup'
 
 const [ is, setIs, { toggle } ] = useBoolean(true)
 
------------- // or \\\\ ------------
+------------ // or \\ ------------
 
 import useBoolean from 'bjork_react-hookup/core/useBoolean'
 
