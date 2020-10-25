@@ -1,5 +1,5 @@
-# `useAsync`
-useAsync reduces littering in your component by abstracting logic and management of multiple states.
+# `useInView`
+Detects if refrenced element/component is in view. Requires ref to function.
 
 ## Arguments
 - `ref {element}`: ref to the targeted element/component
