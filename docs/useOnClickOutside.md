@@ -1,5 +1,5 @@
 # `useOnClickOutside`
-Listens for click events outside of element. Requires ref to function.
+Listens for clicks outside of element. Requires ref to function.
 
 ## Arguments
 - `ref {element}`: ref to the targeted element/component
