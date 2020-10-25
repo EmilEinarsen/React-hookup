@@ -17,6 +17,7 @@ const getCoordinates = () => ({
 /**
  * useWindowScroll hook - Adds Eventlisners to the window and returns and an array of two elemnts: state and setCoordinatesAndScrollTo
  * _coordinates_ {object}: Contains two propertys x {number} and y {number}. Each contains the scroll "position" by x, respectivly y.
+ * _setCoordinates_ {function}: Scrolls to and, therefor, sets the coordinates, the param needs to be an object with two propertys x and y
  * 
  * @return {array} [ coordinates, setCoordinatesAndScrollTo ]
  */
