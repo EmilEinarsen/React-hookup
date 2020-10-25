@@ -8,3 +8,9 @@ Detects if refrenced element/component is in view. Requires ref to function.
 ## Returns
 * _isInView_ {boolean}: Contains the state, just like the first element of useState. Only depends on if the provided element is "in view" by the Y-axis
 * _setInViewByScrollTo_ {function}: Sets the state, just like the second element of useState, only does this without any additonall params throught _ref_. Inadditon, scrolls the element into view
+
+## Usage
+inprogress...
+```jsx
+
+```

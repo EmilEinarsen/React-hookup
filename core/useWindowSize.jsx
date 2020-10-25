@@ -12,7 +12,13 @@ const getSize = () => ({
 	width: window.innerWidth,
 	height: window.innerHeight,
 })
- 
+
+/**
+ * useWindowSize hook - Adds an eventlisner to the window and returns an array of one elemnts: size
+ * _size_ {object}: Contains two propertys width {number} and height {number}
+ * 
+ * @return {array} [ size ]
+ */ 
 const useWindowSize = () => {
 	const [ size, setSize ] = useState(getSize())
 
