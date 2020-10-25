@@ -1,4 +1,4 @@
-## [useArray](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useArray.md)
+## [`useArray`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useArray.md)
 Manipulate and read an array
 
 ------------------------------------------------------------------------------------------------------------------------
