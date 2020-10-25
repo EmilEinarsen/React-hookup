@@ -1,15 +1,15 @@
 # 🍻`React-hookup`
 
-## What is this?
+## ❓`What is this?`
 A React Hooks utility library containing costum hooks/data structures
 
-## Install
+## ⚙`Install`
 Use npm to install react-hookup.
 ```bash
 > npm i bjork_react-hookup
 ```
 
-## Usage
+## 🔥`Usage`
 
 ```js
 ------------ // for example \\ ------------
@@ -49,10 +49,10 @@ const [ is, setIs, { toggle } ] = useBoolean(true)
 | ↕[`useWindowSize`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useWindowSize.md)         | [ size ]                                                              |                                         |
 
 
-## Contribution
+## 👨‍💻`Contribution`
 Pull requests are welcome. For any considerable changes, please open an issue first to discuss what you would like to change.<br>
 
-## Licence
+## ⚖`Licence`
 [MIT](https://github.com/EmilEinarsen/bjork_react-hookup/blob/master/LICENSE)
 
 
