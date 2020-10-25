@@ -11,7 +11,7 @@ const elementYPos = (ref, offset) => ref.getBoundingClientRect().top + window.pa
  * * _setInViewByScrollTo_ {function}: Sets the state, just like the second element of useState, only does this without any additonall params throught _ref_. Inadditon, scrolls the element into view
  * 
  * @param {element} ref - Ref to the DOMelement
- * @param {element} offset - Offsets where the element is considerd "in view" by the Y-axis
+ * @param {number} offset - Offsets where the element is considerd "in view" by the Y-axis, defualt 0
  * @return {array} [ isInView, setInViewByScrollTo ]
  */
 const useInView = (ref, offset = 0) => {
