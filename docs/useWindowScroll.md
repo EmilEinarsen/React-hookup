@@ -1,5 +1,5 @@
-# `useInView`
-Detects if refrenced element/component is in view. Requires ref to function.
+# `useWindowScroll`
+Listens for scroll and returns the coordinates
 
 ## Returns
 * _coordinates_ {object}: Contains two propertys x {number} and y {number}. Each contains the scroll "position" by x, respectivly y.
