@@ -1,4 +1,4 @@
-# `useObject`
+# `useStorage`
 Manages state and storage simultaneously. Choose between local, session and cookie. 
 Utilizes and therefor depends on bjork_useStorage. For more information check out [bjork_usestorage](https://github.com/EmilEinarsen/bjork_usestorage)
 
