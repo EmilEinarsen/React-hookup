@@ -1,4 +1,4 @@
-# 🍻 React-hookup
+# 🥂`React-hookup`
 
 ## What is this?
 A React Hooks utility library containing costum hooks/data structures
