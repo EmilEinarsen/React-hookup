@@ -1,8 +1,8 @@
 # `useArray`
-Manipulate and read an Array
+Manipulate and read an array
 
 ## Arguments
-- `initialValue {Array}`: init of array
+- `initial {array}`: init of array
 
 ## Returns
 * _array_ {array}: Contains the value of the state, just like the first element of useState
