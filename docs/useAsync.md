@@ -31,13 +31,13 @@ const Async = () => {
 	const { pending, value, error } = state
 
 	return (
-		<div>
+		<>
 			<p>{ value ? value : error ? error : '🏜'}</p>
 
 			<button onClick={() => !pending ? execute() : ''}>
 				{ pending ? 'pending ...' : 'fetch' }
 			</button>
-		</div>
+		</>
 	)
 }
 ```
