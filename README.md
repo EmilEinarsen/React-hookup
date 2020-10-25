@@ -27,23 +27,40 @@ const [ is, setIs, { toggle } ] = useBoolean(true)
 
 ## Hook Documentation
 
-| Name                                    | Returns                                    | Arguments                               |
-| --------------------------------------- | ------------------------------------------ | --------------------------------------- |
-| [`useArray`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useArray.md)                          | [ array, setArray, methods ]               | ( initial )                             |
-| [`useAsync`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useAsync.md)                          | [ state, execute ]                         | ( asyncFunction, immediate )            |
-| [`useBoolean`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useBoolean.md)                        | [ is, setIsByBoolean, methods ]            | ( initial )                             |
-| [`useDebounce`]()                       | [ state, setStateByDebounce ]              | ( initial )                             |
-| [`useField`]()                          | [ value, setValue, bind ]                  | ( initial )                             |
-| [`useFocus`]()                          | [ isFocus, bind ]                          |                                         |
-| [`useHover`]()                          | [ isHover, bind ]                          |                                         |
-| [`useInView`]()                         | [ isInView, setInViewByScrollTo ]          | ( ref, offset )                         |
-| [`useObject`]()                         | [ object, setObject, methods ]             | ( initial )                             |
-| [`useOnClickOutside`]()                 |                                            | ( ref, func )                           |
-| [`useScreenType`]()                     | [ type ]                                   |                                         |
-| [`useStorage`]()                        | [ item, setItem ]                          | ( type, key, initialValue )             |
-| [`useThrottle`]()                       | [ state, setStateByThrottle ]              | ( initial )                             |
-| [`useWindowScroll`]()                   | [ coordiantes, setCoordinatesAndScrollTo ] |                                         |
-| [`useWindowSize`]()                     | [ size ]                                   |                                         |
+| Name                                                                                                          | Returns                                                              | Arguments                               |
+
+| ------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------- |
+
+| [`useArray`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useArray.md)                   | [ array, setArray, methods ]                                         | ( initial )                             |
+
+| [`useAsync`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useAsync.md)                   | [ state, execute ]                                                    | ( asyncFunction, immediate )            |
+
+| [`useBoolean`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useBoolean.md)               | [ is, setIsByBoolean, methods ]                                      | ( initial )                             |
+
+| [`useDebounce`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useDebounce.md)             | [ state, setStateByDebounce ]                                        | ( initial )                             |
+
+| [`useField`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useField.md)                   | [ value, setValue, bind ]                                            | ( initial )                             |
+
+| [`useFocus`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useFocus.md)                   | [ isFocus, bind ]                          |                                         |
+
+| [`useHover`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useHover.md)                   | [ isHover, bind ]                          |                                         |
+
+| [`useInView`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useInView.md)                 | [ isInView, setInViewByScrollTo ]                                    | ( ref, offset )                         |
+
+| [`useObject`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useObject.md)                 | [ object, setObject, methods ]                                       | ( initial )                             |
+
+| [`useOnClickOutside`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useOnClickOutside.md) |                                                                      | ( ref, func )                           |
+
+| [`useScreenType`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useScreenType.md)         | [ type ]                                   |                                         |
+
+| [`useStorage`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useStorage.md)               | [ item, setItem ]                                                    | ( type, key, initialValue )             |
+
+| [`useThrottle`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useThrottle.md)             | [ state, setStateByThrottle ]                                        | ( initial )                             |
+
+| [`useWindowScroll`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useWindowScroll.md)     | [ coordiantes, setCoordinatesAndScrollTo ] 
+|                                         |
+
+| [`useWindowSize`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useWindowSize.md)         | [ size ]                                                              |                                         |
 
 
 ## Contribution
