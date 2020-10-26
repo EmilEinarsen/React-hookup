@@ -23,7 +23,7 @@ const OnClickOutsideContainer = () => {
   return <OnClickOutside props={{ ref, isVisible, setTrue }} />;
 };
 
-// ---------- Logic ---------- \\
+// ---------- Visual ---------- \\
 
 const style = {
   display: "block",
