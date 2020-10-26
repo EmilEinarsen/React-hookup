@@ -33,11 +33,6 @@ Manages detection of hover. Requires spreading the second param __bind__ over th
 
 ------------------------------------------------------------------------------------------------------------------------
 
-## 🖥[`useInView`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useInView.md)
-Detects if refrenced element/component is in view. Requires ref to function.
-
-------------------------------------------------------------------------------------------------------------------------
-
 ## 📑[`useObject`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useObject.md)
 Manipulate and read an object
 
