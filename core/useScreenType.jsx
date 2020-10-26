@@ -1,5 +1,12 @@
+import Throttle from 'bjork_restrain/modules/Throttle'
 import { useState, useEffect } from 'react'
-import useWindowSize from './useWindowSize'
+
+const throttle = (new Throttle).process
+
+const EventlisnerOptions = {
+	capture: false,
+	passive: true,
+}
 
 const SIZE = {
 	XS: [ 'xs', 0 ],
@@ -9,9 +16,9 @@ const SIZE = {
 	XL: [ 'xl', 1920 ],
 }
 
-const matchMedia = size => window.matchMedia(`(max-width: ${size}px)`).matches 
+const matchMedia = size => !window.matchMedia(`(max-width: ${size}px)`).matches 
 
-const getSreenType = ({ XS, SM, MD, LG, XL } = SIZE) => ({
+const getScreenType = ({ XS, SM, MD, LG, XL } = SIZE) => ({
 	[XS[0]]: matchMedia(XS[1]),
 	[SM[0]]: matchMedia(SM[1]),
 	[MD[0]]: matchMedia(MD[1]),
@@ -19,20 +26,26 @@ const getSreenType = ({ XS, SM, MD, LG, XL } = SIZE) => ({
 	[XL[0]]: matchMedia(XL[1]),
 })
 
+
 /**
- * useWindowScroll hook - Returns and an array with an element, type
+ * useScreenType hook - Returns and an array with an element, type
  * _types_ {object}: contains 5 propertys, xs - xl. Each property can either be true or false, to represent a breakpoint
  * 
  * @return {array} [ type ]
  */
 const useScreenType = () => {
-	const [ type, setType ] = useState(getSreenType())
-	const { width } = useWindowSize()[0]
+	const [type, setType] = useState(getScreenType())
+
+	const onHandleResize = () => throttle(() => setType(getScreenType()), 100)
 
 	useEffect(() => {
-		setType( getSreenType() )
-	}, [width])
-	
+		window.addEventListener('resize', onHandleResize, EventlisnerOptions)
+
+		return () => {
+			window.removeEventListener('resize', onHandleResize, EventlisnerOptions)
+		}
+	})
+
 	return [
 		type
 	]
