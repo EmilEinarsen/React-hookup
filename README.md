@@ -1,5 +1,5 @@
 # 🍻`React-hookup`
-A React Hooks utility library containing costum hooks/data structures
+A React Hooks utility library containing custom hooks/data structures
 
 ## ⚙`Install`
 Use npm to install react-hookup.
