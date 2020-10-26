@@ -1,7 +1,7 @@
 {
   "name": "bjork_react-hookup",
   "version": "1.7.1",
-  "description": "A collection of custom react hooks",
+  "description": "A React Hooks utility library containing costum hooks/data structures",
   "main": "index.js",
   "scripts": {
     "build:doc": "jsdoc -c jsdoc.json"
