@@ -2,6 +2,24 @@
   "name": "bjork_react-hookup",
   "version": "1.7.1",
   "description": "A React Hooks utility library containing custom hooks/data structures",
+  "keywords": [
+    "React",
+    "Hooks",
+    "useAsync",
+    "useArray",
+    "useBoolean",
+    "useDebounce",
+    "useField",
+    "useFocus",
+    "useHover",
+    "useObject",
+    "useOnClickOutside",
+    "useScreenType",
+    "useStorage",
+    "useThrottle",
+    "useWindowScroll",
+    "useWindowSize"
+  ],
   "main": "index.js",
   "scripts": {
     "build:doc": "jsdoc -c jsdoc.json"
