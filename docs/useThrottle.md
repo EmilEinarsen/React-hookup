@@ -10,22 +10,37 @@ Functions like useState, but with an built-in throttle
 
 ## Usage
 ```jsx
-import { useThrottle } from 'bjork_react-hookup'
+// ---------- Logic ---------- \\
 
-const Debounce = () => {
+import { useThrottle } from 'bjork_react-hookup'
+import Throttle from './Throttle'
+
+const ThrottleContainer = () => {
 	const [ count, setCount ] = useThrottle(0)
 	const [ clicked, setClicked ] = useState(0)
 
-	return (
-		<>
-			<p>I'm {count}, but clicked {clicked}</p>
-			<button onClick={() => { 
-				setCount(count+1, 1000) 
-				setClicked(clicked+1)
-			}}>
-				Throttle
-			</button>
-		</>
-	)
+	return <Throttle props={{ count, setCount, clicked, setClicked }} />
 }
+
+
+// ---------- Visual ---------- \\
+
+const Throttle = ({ 
+	props: { 
+		count, 
+		setCount, 
+		clicked, 
+		setClicked 
+	} 
+}) => (
+	<>
+		<p>I'm {count}, but clicked {clicked}</p>
+		<button onClick={() => { 
+			setCount(++count, 1000) 
+			setClicked(++clicked)
+		}}>
+			Throttle
+		</button>
+	</>
+)
 ```

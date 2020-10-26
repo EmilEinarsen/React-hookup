@@ -11,16 +11,29 @@ Manages basic manipulation and controll of field. Requires spreading the third p
 
 ## Usage
 ```jsx
+// ---------- Logic ---------- \\
+
 import { useField } from 'bjork_react-hookup'
+import Field from './Field'
 
-const Field = () => {
-	const [ state, setState, bind ] = useField()
+const FieldContainer = () => {
+	const [ state, , bind ] = useField()
 
-	return (
-		<>
-			<p>{ !state ? '💀 Empty' : `😎 Value: ${state}` }</p>
-			<input {...bind}></input>
-		</>
-	)
+	return <Field props={{state, bind}} />
 }
+
+
+// ---------- Visual ---------- \\
+
+const Field = ({ 
+	props: { 
+		state, 
+		bind 
+	} 
+}) => (
+	<>
+		<p>{ !state ? '💀 Empty' : `😎 Value: ${state}` }</p>
+		<input {...bind}></input>
+	</>
+)
 ```

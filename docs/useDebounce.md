@@ -10,22 +10,37 @@ Functions like useState, but with an built-in debounce
 
 ## Usage
 ```jsx
-import { useDebounce } from 'bjork_react-hookup'
+// ---------- Logic ---------- \\
 
-const Debounce = () => {
+import { useDebounce } from 'bjork_react-hookup'
+import Debounce from './Debounce'
+
+const DebounceContainer = () => {
 	const [ count, setCount ] = useDebounce(0)
 	const [ clicked, setClicked ] = useState(0)
 
-	return (
-		<>
-			<p>I'm {count}, but clicked {clicked}</p>
-			<button onClick={() => { 
-				setCount(count+1, 1000) 
-				setClicked(clicked+1)
-			}}>
-				Debounce
-			</button>
-		</>
-	)
+	return <Debounce props={{ count, setCount, clicked, setClicked }} />
 }
+
+
+// ---------- Visual ---------- \\
+
+const Debounce = ({ 
+	props: { 
+		count, 
+		setCount, 
+		clicked, 
+		setClicked 
+	}
+}) => (
+	<> 
+		<p>I'm {count}, but clicked {clicked}</p>
+		<button onClick={() => { 
+				setCount(++count, 1000) 
+				setClicked(++clicked)
+		}}>
+			Debounce
+		</button>
+	</>
+)
 ```

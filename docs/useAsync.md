@@ -1,5 +1,5 @@
 # `useAsync`
-useAsync reduces littering in your component by abstracting logic and management of multiple states.
+Reduces littering in your component by abstracting logic and management of multiple states.
 
 ## Arguments
 - `asyncFunction {function}`: async function to be executed
@@ -14,7 +14,10 @@ useAsync reduces littering in your component by abstracting logic and management
 
 ## Usage
 ```jsx
+// ---------- Logic ---------- \\
+
 import { useAsync } from 'bjork_react-hookup'
+import Async from './Async'
 
 const delayedValue = () => (
 	new Promise((resolve, reject) => {
@@ -25,19 +28,28 @@ const delayedValue = () => (
 	})
 )
  
-const Async = () => {
-	const [ state, execute ] = useAsync(delayedValue, false)
+const AsyncContainer = () => {
+	const [ { pending, value, error }, execute ] = useAsync(delayedValue, false)
 
-	const { pending, value, error } = state
-
-	return (
-		<>
-			<p>{ value ? value : error ? error : '🏜'}</p>
-
-			<button onClick={() => !pending ? execute() : ''}>
-				{ pending ? 'pending ...' : 'fetch' }
-			</button>
-		</>
-	)
+	return <Async props={{ pending, value, error, execute }} />
 }
+
+
+// ---------- Visual ---------- \\
+
+const Async = ({
+	props: { 
+		pending, 
+		value, 
+		error, 
+		execute 
+	}
+}) => (
+	<div>
+		<p>{ value ? value : error ? error : '🏜'}</p>
+		<button onClick={() => !pending ? execute() : ''}>
+			{ pending ? 'pending ...' : 'fetch' }
+		</button>
+	</div>
+)
 ```

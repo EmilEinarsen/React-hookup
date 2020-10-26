@@ -7,7 +7,19 @@ Listens for scroll and returns the coordinates
 
 ## Usage
 ```jsx
+// ---------- Logic ---------- \\
+
 import { useWindowScroll } from 'bjork_react-hookup'
+import WindowScroll from './WindowScroll'
+
+const WindowScrollContainer = () => {
+	const [ state ] = useWindowScroll()
+
+	return <WindowScroll props={{ state }} />
+}
+
+
+// ---------- Visual ---------- \\
 
 const style = {
 	display: 'block',
@@ -20,14 +32,16 @@ const style = {
 	right: '0',
 }
 
-const WindowScroll = () => {
-	const [ state ] = useWindowScroll()
-	const { x, y } = state
-
-	return (
-		<div style={style}>
-			Your scroll position is X:{Math.floor(x)}, Y:{Math.floor(y)}
-		</div>
-	)
-}
+const WindowScroll = ({ 
+	props: { 
+		state: { 
+			x, 
+			y 
+		} 
+	} 
+}) => (
+	<div style={style}>
+		Your scroll position is X:{Math.floor(x)}, Y:{Math.floor(y)}
+	</div>
+)
 ```

@@ -4,19 +4,32 @@ Utilizes and therefor depends on bjork_useStorage. For more information check ou
 
 ## Usage
 ```jsx
-import { useStorage } from 'bjork_react-hookup'
+// ---------- Logic ---------- \\
 
-const Storage = () => {
+import { useStorage } from 'bjork_react-hookup'
+import Storage from './Storage'
+
+const StorageContainer = () => {
 	const [ state, setState ] = useStorage( 'local', 'value' )
 
-	return (
-		<>
-			<p>{ !state ? '💀 Empty' : `😎 Stored : ${state}` }</p>
-			<input 
-				onChange={e => setState(e.target.value)}
-				value={state}
-			></input>
-		</>
-	)
+	return <Storage props={{ state, setState }} />
 }
+
+
+// ---------- Visual ---------- \\
+
+const Storage = ({ 
+	props: { 
+		state, 
+		setState 
+	} 
+}) => (
+	<>
+		<p>{ !state ? '💀 Empty' : `😎 Stored : ${state}` }</p>
+		<input 
+			onChange={e => setState(e.target.value)}
+			value={state}
+		></input>
+	</>
+)
 ```

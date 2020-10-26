@@ -10,16 +10,28 @@ Manages detection of focus. Requires spreading the second param __bind__ over th
 
 ## Usage
 ```jsx
-import { useFocus } from 'bjork_react-hookup'
+// ---------- Logic ---------- \\
 
-const Focus = () => {
+import { useFocus } from 'bjork_react-hookup'
+import Focus from './Focus'
+
+const FocusContainer = () => {
 	const [ isFocus, bind ] = useFocus()
 
-	return (
-		<>
-			<p>{isFocus ? '😁' : '☹️'}</p>
-			<input {...bind} ></input>
-		</>
-	)
+	return <Focus props={{ isFocus, bind }} />
 }
+
+// ---------- Visual ---------- \\
+
+const Focus = ({ 
+	props: { 
+		isFocus, 
+		bind 
+	}
+}) => (
+	<>
+		<p>{isFocus ? '😁' : '☹️'}</p>
+		<input {...bind} ></input>
+	</>
+)
 ```

@@ -14,18 +14,33 @@ _is_ {boolean}: Contains the state, just like the first element of useState, onl
 
 ## Usage
 ```jsx
+// ---------- Logic ---------- \\
+
 import { useBoolean } from 'bjork_react-hookup'
+import Boolean from './Boolean'
 
-const Button = () => {
-	const [ state, setState, { toggle, setTrue, setFalse } ] = useBoolean(false)
+const BooleanContainer = () => {
+	const [ state, , { toggle, setTrue, setFalse } ] = useBoolean(false)
 
-	return (
-		<>
-			<p>{state ? '😁' : '☹️'}</p>
-			<button onClick={toggle}>TOGGLE</button>
-			<button onClick={setTrue}>TRUE</button>
-			<button onClick={setFalse}>FALSE</button>
-		</>
-	)
+	return <Boolean props={{state, toggle, setTrue, setFalse}} />
 }
+
+
+// ---------- Visual ---------- \\
+
+const Boolean = ({
+	props: { 
+		state, 
+		toggle, 
+		setTrue, 
+		setFalse 
+	}
+}) => (
+	<>
+		<p>{state ? '😁' : '☹️'}</p>
+		<button onClick={toggle}>TOGGLE</button>
+		<button onClick={setTrue}>TRUE</button>
+		<button onClick={setFalse}>FALSE</button>
+	</>
+)
 ```

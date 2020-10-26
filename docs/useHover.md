@@ -10,7 +10,19 @@ Manages detection of hover. Requires spreading the second param __bind__ over th
 
 ## Usage
 ```jsx
+// ---------- Logic ---------- \\
+
 import { useHover } from 'bjork_react-hookup'
+import Hover from './Hover'
+
+const HoverContainer = () => {
+	const [ isHover, bind ] = useHover() 
+
+	return <Hover props={{ isHover, bind }} />
+}
+
+
+// ---------- Visual ---------- \\
 
 const style = {
 	height: "50px", 
@@ -20,15 +32,16 @@ const style = {
 	placeContent: 'center',
 }
 
-const Hover = () => {
-	const [ isHover, bind ] = useHover() 
-
-	return (
-		<>
-			<div {...bind} style={style}>
-				{isHover ? '😁' : '☹️'}
-			</div>
-		</>
-	)
-}
+const Hover = ({ 
+	props: { 
+		isHover, 
+		bind 
+	} 
+}) => (
+	<>
+		<div {...bind} style={style}>
+			{isHover ? '😁' : '☹️'}
+		</div>
+	</>
+)
 ```
