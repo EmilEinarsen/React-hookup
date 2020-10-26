@@ -1,4 +1,4 @@
-# `useAsync`
+# ⏳`useAsync`
 
 Reduces littering in your component by abstracting logic and management of multiple states.
 

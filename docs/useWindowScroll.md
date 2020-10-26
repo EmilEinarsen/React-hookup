@@ -1,4 +1,4 @@
-# `useWindowScroll`
+# 🧭`useWindowScroll`
 
 Listens for scroll and returns the coordinates
 

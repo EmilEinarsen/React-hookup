@@ -1,4 +1,4 @@
-# `useFocus`
+# 🔦`useFocus`
 
 Manages detection of focus. Requires spreading the second param **bind** over the targeted field to function.
 

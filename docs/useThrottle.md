@@ -1,4 +1,4 @@
-# `useThrottle`
+# 🥁`useThrottle`
 
 Functions like useState, but with an built-in throttle
 

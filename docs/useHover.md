@@ -1,4 +1,4 @@
-# `useHover`
+# 👻`useHover`
 
 Manages detection of hover. Requires spreading the second param **bind** over the targeted element/component to function.
 

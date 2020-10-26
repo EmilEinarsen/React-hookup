@@ -1,4 +1,4 @@
-# `useScreenType`
+# 🤏`useScreenType`
 
 Utilizes useWindowSize and matchMedia to return and object containing 5 propertys xs-xl, each can either be true or false. Each of the propertys breakpoints are based of [Material UI](https://material-ui.com/customization/breakpoints/)
 

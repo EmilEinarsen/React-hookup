@@ -1,4 +1,4 @@
-# `useBoolean`
+# 🎭`useBoolean`
 
 Manipulate and read a Boolean useState
 

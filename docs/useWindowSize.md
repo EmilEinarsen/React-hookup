@@ -1,4 +1,4 @@
-# `useWindowSize`
+# ↕`useWindowSize`
 
 Listens for resize and returns the screen width and height
 

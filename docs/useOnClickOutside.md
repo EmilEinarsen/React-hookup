@@ -1,4 +1,4 @@
-# `useOnClickOutside`
+# 🖱`useOnClickOutside`
 
 Listens for clicks outside of element. Requires ref to function.
 
