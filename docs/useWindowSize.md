@@ -7,9 +7,6 @@ Listens for resize and returns the screen width and height
 - _size_ {object}: contains two propertys width {number} and height {number}
 
 ## Usage
-
-inprogress...
-
 ```jsx
 // ---------- Logic ---------- \\
 

@@ -7,9 +7,6 @@ Utilizes useWindowSize and matchMedia to return and object containing 5 property
 - _types_ {object}: contains 5 propertys, xs - xl. Each property can either be true or false, to represent a breakpoint
 
 ## Usage
-
-inprogress...
-
 ```jsx
 // ---------- Logic ---------- \\
 
