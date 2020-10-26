@@ -80,3 +80,9 @@ Listens for scroll and returns the coordinates
 ## ↕[`useWindowSize`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useWindowSize.md)
 
 Listens for resize and returns the width and height
+
+---
+
+## ⌚🎞[`useMemento`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useMemento.md)
+
+Manipulate past, present and future of states. Stores past values, allowing actions like _undo_ and _redo_, which inturn results in a useState that immulates Ctrl+z and Ctrl+y.

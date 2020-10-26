@@ -12,6 +12,7 @@ import useField from './core/useField'
 import useAsync from './core/useAsync'
 import useWindowSize from './core/useWindowSize'
 import useScreenType from './core/useScreenType'
+import useMemento from './core/useMemento'
 
 
 export {
@@ -30,5 +31,6 @@ export {
 	useThrottle,
 	useWindowScroll,
 	useWindowSize,
+	useMemento,
 	
 }
