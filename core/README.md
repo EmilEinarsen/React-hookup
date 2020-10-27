@@ -1,3 +1,9 @@
+## 💡[`useActive`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useActive.md)
+
+Manages detection of active. Requires spreading the second param **bind** over the targeted element to function.
+
+---
+
 ## 📋[`useArray`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useArray.md)
 
 Manipulate and read an array

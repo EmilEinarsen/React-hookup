@@ -2,10 +2,6 @@
 
 Manages detection of focus. Requires spreading the second param **bind** over the targeted field to function.
 
-## Arguments
-
-- `initial {*}`: Initial state
-
 ## Returns
 
 - _isFocus_ {boolean}: Contains the state, just like the first element of useState. Only exclusivly boolean

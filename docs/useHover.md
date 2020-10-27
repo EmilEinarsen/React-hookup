@@ -2,10 +2,6 @@
 
 Manages detection of hover. Requires spreading the second param **bind** over the targeted element/component to function.
 
-## Arguments
-
-- `initial {*}`: Initial state
-
 ## Returns
 
 - _isHover_ {boolean}: Contains the state, just like the first element of useState. Only exclusivly boolean
@@ -36,10 +32,8 @@ const style = {
 };
 
 const Hover = ({ props: { isHover, bind } }) => (
-  <>
-    <div {...bind} style={style}>
-      {isHover ? "😁" : "☹️"}
-    </div>
-  </>
+  <div {...bind} style={style}>
+    {isHover ? "😁" : "☹️"}
+  </div>
 );
 ```

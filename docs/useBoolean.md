@@ -4,7 +4,7 @@ Manipulate and read a Boolean useState
 
 ## Arguments
 
-- `initial {boolean}`: Initial state
+- `initial {*}`: Initial state, will be converted to boolean
 
 ## Returns
 
