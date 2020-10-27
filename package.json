@@ -1,10 +1,11 @@
 {
   "name": "bjork_react-hookup",
-  "version": "2.0.3",
+  "version": "2.0.5",
   "description": "A React Hooks utility library containing custom hooks/data structures",
   "keywords": [
     "React",
     "Hooks",
+    "useActive",
     "useAsync",
     "useArray",
     "useBoolean",
@@ -12,6 +13,7 @@
     "useField",
     "useFocus",
     "useHover",
+    "useMemento",
     "useObject",
     "useOnClickOutside",
     "useScreenType",
