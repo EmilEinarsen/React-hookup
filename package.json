@@ -5,6 +5,7 @@
   "keywords": [
     "React",
     "Hooks",
+    "useActive",
     "useAsync",
     "useArray",
     "useBoolean",
@@ -12,6 +13,7 @@
     "useField",
     "useFocus",
     "useHover",
+    "useMemento",
     "useObject",
     "useOnClickOutside",
     "useScreenType",
