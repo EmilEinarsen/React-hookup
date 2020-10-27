@@ -1,6 +1,6 @@
 ## 💡[`useActive`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useActive.md)
 
-Manipulate and read an array
+Manages detection of active. Requires spreading the second param **bind** over the targeted element to function.
 
 ---
 
@@ -46,12 +46,6 @@ Manages detection of hover. Requires spreading the second param **bind** over th
 
 ---
 
-## ⌚[`useMemento`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useMemento.md)
-
-Manipulate past, present and future of states. Stores past values, allowing actions like _undo_ and _redo_, which inturn results in a useState that immulates Ctrl+z and Ctrl+y.
-
----
-
 ## 📑[`useObject`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useObject.md)
 
 Manipulate and read an object
@@ -92,3 +86,9 @@ Listens for scroll and returns the coordinates
 ## ↕[`useWindowSize`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useWindowSize.md)
 
 Listens for resize and returns the width and height
+
+---
+
+## ⌚[`useMemento`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useMemento.md)
+
+Manipulate past, present and future of states. Stores past values, allowing actions like _undo_ and _redo_, which inturn results in a useState that immulates Ctrl+z and Ctrl+y.

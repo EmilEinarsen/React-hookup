@@ -33,7 +33,7 @@ const [ is, setIs, { toggle } ] = useBoolean(true)
 
 | Name                                                                                                           | Returns                                    | Arguments                    |
 | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------ | ---------------------------- |
-| 📋[`useActive`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useActive.md)                | [ isActive, bind ]                         |                              |
+| 💡[`useActive`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useActive.md)                | [ isActive, bind ]                         |                              |
 | 📋[`useArray`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useArray.md)                  | [ array, setArray, methods ]               | ( initial )                  |
 | ⏳[`useAsync`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useAsync.md)                  | [ state, execute ]                         | ( asyncFunction, immediate ) |
 | 🎭[`useBoolean`](https://github.com/EmilEinarsen/bjork_react-hookup/blob/main/docs/useBoolean.md)              | [ is, setIsByBoolean, methods ]            | ( initial )                  |
